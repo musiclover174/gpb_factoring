@@ -1,0 +1,510 @@
+html,
+body
+  font-family $os
+  color white
+body
+  overflow-x hidden
+  bgc $blue
+  &:not(.pace-done)
+    overflow hidden
+  &
+    .header
+      transition .7s height, .7s box-shadow, .7s opacity
+    .content,
+    .footer,
+    .swiper-buttons
+      opacity 0
+      transition .7s opacity
+    .content
+      z-index -5
+      pos relative
+      transition-delay 0.3s
+    .header,
+    .footer,
+    .swiper-buttons
+      transition-delay 0.8s
+  &.pace-done
+    .header,
+    .content,
+    .footer,
+    .swiper-buttons
+      opacity 1
+    .content
+      z-index auto
+    .pace
+      dn()
+          
+.content
+  pos relative
+  pt 100vh
+  overflow hidden
+  h1:not([class])
+    color black
+    fontify 72px 700 76px
+    margin 63px 0 35px
+    @media $lDesktopMedium
+      fontify 60px 700 64px
+    @media $desktopMin
+      fontify 52px 700 56px
+    @media $LandscapeMedium
+      fontify 42px 700 46px
+  h2:not([class])
+    color black
+    fontify 48px 700 54px
+    margin 63px 0 28px
+    @media $lDesktopMedium
+      fontify 39px 700 44px
+    @media $LandscapeMedium
+      fontify 30px 700 34px
+      margin 45px 0 28px
+  h3:not([class])
+    color $dark
+    fontify 36px 700 42px
+    margin 65px 0 38px
+    @media $lDesktopMedium
+      fontify 31px 700 37px
+    @media $LandscapeMedium
+      fontify 26px 700 34px
+      margin 45px 0 28px
+  h4:not([class])
+    color $dark
+    fontify 24px 700 34px
+    margin 43px 0 16px
+    @media $lDesktopMedium
+      fontify 21px 700 27px
+  img:not([class])
+    margin 5px 0
+    max-width 100%
+  ul:not([class])
+    list-style  none
+    margin  23px 0
+  ul:not([class]) li
+    pl 30px
+    pos relative
+    fontify 20px 400 27px
+    @media $lDesktopSmall
+      fontify 17px 400 24px
+  ul:not([class]) li + li
+    mt 25px
+  ul:not([class]) li:before
+    content ""
+    pos absolute
+    l 0
+    t 13px
+    size 14px 1px
+    bgc $green
+  ol:not([class])
+    list-style none
+    margin 23px 0
+    counter-reset myCounter
+  ol:not([class]) li
+    pl 30px
+    pos relative
+    fontify 18px 400 24px
+    @media $lDesktopMedium
+      fontify 15px 400 23px
+  ol:not([class]) li + li
+    mt 24px
+  ol:not([class]) li:before
+    counter-increment myCounter
+    content counter(myCounter)"."	
+    pos absolute
+    l 0
+    t 0
+    w 30px
+    pr 9px
+    color $green
+    fontify 18px 400 24px
+    @media $lDesktopMedium
+      fontify 15px 400 23px
+  p:not([class])
+    color black
+    fontify 18px 400 24px
+    margin 21px 0
+    @media $lDesktopMedium
+      fontify 15px 400 23px
+  a:not([class])
+    color $red
+    border-bottom 1px solid currentColor
+    transition .5s border
+    &:hover
+      border-color transparent
+ 
+  *:not([class]):not(span):first-child
+    mt 0 !important
+  *:not([class]):not(span):last-child
+    margin-bottom 0 !important
+
+  table
+    margin 30px 0
+    border 2px solid $green
+  table th
+    text-align left
+    padding 16px 24px
+    color black
+    fontify 15px 400 21px
+    border 1px solid #f0f3e1
+  table td
+    padding 18px 24px
+    color $dark
+    fontify 15px 400 21px
+    border 1px solid #f0f3e1
+
+input::-webkit-input-placeholder
+  color alpha(white, .5)
+input::-moz-placeholder
+  color alpha(white, .5)
+input:-ms-input-placeholder
+  color alpha(white, .5)
+
+div[class\^="table-scroller"]
+  overflow auto
+  pos relative
+  @media $desktopMax
+    w 100%
+
+.btn
+  ib()
+  bgc $pink
+  border 0
+  border-radius 36px
+  font-family $text
+  color white
+  outline none
+  cursor pointer
+  fontify 27px 500 72px
+  padding 0 50px
+  transition .7s opacity
+  @media $lDesktopMedium
+    fontify 20px 500 51px
+    padding 0 28px
+  &:hover
+    opacity .85
+    
+.common
+  &__title 
+    pos relative
+    color $blue
+    font-family $comp
+    fontify 103px 500 93px
+    text-transform uppercase
+    mb 42px
+    ml -4px
+    @media $lDesktopMedium
+      fontify 73px 500 73px
+      mb 27px
+    @media $desktopMedium
+      fontify 54px 500 54px
+    @media $PortraitMin
+      fontify 36px 500 40px
+    &:before
+      content ""
+      pos absolute
+      l 4px
+      t -42px
+      size 90px 11px
+      bgc $pink
+      @media $PortraitMin
+        t -25px
+        h 6px
+    &_white
+      color white
+    &_small
+      font-family $text
+      fontify 57px 500 51px
+      text-transform none
+      @media $lDesktopMedium
+        fontify 41px 500 41px
+      @media $desktopMedium
+        fontify 34px 500 34px
+      @media $PortraitMin
+        fontify 36px 500 40px
+  &__subtitle
+    color black
+    font-family $handy
+    fontify 90px 400 71px
+    text-align right
+    mt 2px
+    @media $lDesktopSmall
+      fontify 60px 400 43px
+    @media $desktopMin
+      fontify 52px 400 40px
+    @media $LandscapeMax
+      text-align inherit
+    @media $LandscapeMedium
+      fontify 32px 400 30px
+  &__input
+    w 100%
+    h 72px
+    border 0
+    border-right 7px solid transparent
+    bgc transparent
+    color $dblue
+    font-family $os
+    font-size 19px
+    font-weight 500
+    transition .5s border
+    padding 0 24px
+    border-radius 5px
+    transition .7s box-shadow, .7s border-color
+    @media $lDesktopMedium
+      fontify 15px 500 50px
+      h 50px
+    &:focus
+      box-shadow 0 0.2rem 0.4rem rgba(17,61,112,0.15)
+    &:focus + ^[0]__placeholder,
+    &.notempty + ^[0]__placeholder
+      dn()
+  &__textarea
+    w 100%
+    h 100px
+    overflow hidden
+    resize none
+    padding 11px 24px
+    border 0
+    border-right 7px solid transparent
+    bgc transparent
+    color $dblue
+    font-family $os
+    fontify 19px 500 24px
+    border-radius 5px
+    transition .7s box-shadow, .7s border-color
+    @media $lDesktopMedium
+      fontify 15px 500 19px
+    &:focus
+      box-shadow 0 0.2rem 0.4rem rgba(17,61,112,0.15)
+    &:focus + ^[0]__placeholder,
+    &.notempty + ^[0]__placeholder
+      dn()
+  &__sbm
+    font-family $os
+    font-size 20px
+    padding 0 66px
+    @media $lDesktopMedium
+      padding 0 36px
+    @media $PortraitMedium
+      w 100%
+      padding 0
+      font-size 16px
+  &__select
+    h 36px
+    bgc #fff
+    border 2px solid #b6b6b6
+    w auto
+    cursor pointer
+    transition .5s border
+    &.warning
+      border-color $pink
+  &__placeholder
+    pos absolute
+    z-index -1
+    l 0 
+    t 0
+    color $dblue
+    padding 0 24px
+    fontify 19px 500 72px
+    overflow hidden
+    max-width 100%
+    @media $lDesktopMedium
+      fontify 15px 700 50px
+    span
+      color rgba(17, 61, 112, 0.7)
+  &__col
+    w calc(50% - 30px)
+    &_wide
+      w calc(100% - 212px)
+    &_short
+      w 162px
+    @media $LandscapeMedium
+      w 100%
+      & + &
+        mt 22px
+  &__row
+    display flex
+    justify-content space-between
+    align-items flex-start
+    pos relative
+    z-index 1
+    w 100%
+    &_bg
+      bgc #F3F5F8
+      border-radius 5px
+    &_center
+      justify-content center
+    & + &
+      mt 36px
+      @media $lDesktopMedium
+        mt 22px
+  &__fileover
+    w 100%
+    pos relative
+    pt 14px
+    pb 14px
+    border-bottom 1px solid white
+    transition .5s border
+    &.warning
+      border-color $pink
+    & + &
+      mt 20px
+  &__file
+    pos absolute
+    w 0
+    h 0
+    l 0
+    t 0
+    opacity 0
+    &name
+      ib()
+      pos relative
+      l 26px
+      cursor pointer
+      color white
+      fontify 14px 700 14px
+      letter-spacing .1em
+      text-transform uppercase
+      border-bottom 1px solid alpha(white, .25)
+      transition .5s border
+      @media $lDesktopSmall
+        font-size 12px
+      &.choosed,
+      &:hover
+        border-color transparent
+      &:after
+        content "*"
+        pos absolute
+        r -11px
+        fontify 23px 400 14px
+        t -3px
+      &:before
+        content ""
+        pos absolute
+        l -24px
+        t 3px
+        size 16px 8px
+        background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAICAMAAADHqI+lAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAe1BMVEX////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////QYBnOAAAAKHRSTlMAFJLi/uaFBRrhukMXERM+1IeisgE0t8xM8EeJRFvnRmnsaKQ1uVUVNSas3QAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAABYSURBVAjXRc1ZEkAwEATQJvZ9jxC74P4nRATvr6eqewBNJ8ahmJYNx/X8IHxEcZIiywuUFZWAmoE1AGm5BHQ92PAf+DjNWK7KqipUbLhGxTcKadfJ+/WOJ3rfCXxQ+WZgAAAAAElFTkSuQmCC") no-repeat center
+      &.choosed + ^[-1]delete
+        visibility visible
+        cursor pointer
+      &.choosed:after
+        content ""
+    &delete
+      ib()
+      visibility hidden
+      mt 3px
+      ml 32px
+      size 9px
+      background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJBAMAAAASvxsjAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAKlBMVEX///////////////////////////////////////////////////////9q+00tAAAADXRSTlMA0Do74eI5bGtqOM7MEv0urwAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAA3SURBVAjXYxBiYGAWYFBRYDBNYGByYg5jYGBQLU0Akhw3GUDsKQoMDExRTE4MDKYLQMp2AbkHAKcGB4WerKhTAAAAAElFTkSuQmCC") no-repeat center
+      
+.fakecheckbox
+  ib()
+  pos relative
+  margin -6px 0 0
+  &__label
+    ib()
+    max-width 355px
+    color rgba(17, 61, 112, 0.5)
+    font-family $os
+    fontify 14px 400 17px
+    pos relative
+    pl 37px
+    cursor pointer
+    &:before 
+      content ""
+      pos absolute
+      l 4px
+      t 7px
+      size 18px
+      border 2px solid #889eb7
+      border-radius 2px
+      cursor pointer
+      transition .7s border, .7s background
+    &:hover:before
+      bgc rgba(17,61,112,0.1)
+    &:after
+      content ""
+      pos absolute
+      size 12px 9px
+      background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAJCAMAAAAxZj1mAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAASFBMVEXllYPllYPllYPllYPllYPllYPllYPllYPllYPllYPllYPllYPllYPllYPllYPllYPllYPllYPllYPllYPllYPllYPllYP///97VY9dAAAAFnRSTlMArYmWgKODmHqOi5xoWpCTmqmgtLzKe3AzJAAAAAFiS0dEFwvWmI8AAAAJcEhZcwAALiMAAC4jAXilP3YAAABFSURBVAjXRYzJFoAgFEKxLJttvP//qfryWCzgLgCpyjUfqgUv+c64B4IGGGXOJM05ljXbZoXIq1Cmu/FRj064/tv7KZkAtt0DYwcUwXAAAAAASUVORK5CYII=") no-repeat center
+      l 10px
+      t 14px
+      opacity 0
+      cursor pointer
+      transition .5s opacity
+    a 
+      color $dblue
+      border-bottom 1px solid
+      transition .7s border, .7s color
+      &:hover
+        border-color transparent
+        color $pink
+  &__truecheck
+    pos absolute
+    l 0
+    t 0
+    w 0
+    h 0
+    border 0
+    opacity 0
+    &:checked + ^[0]__label:after
+      opacity 1
+    &.warning + ^[0]__label:before 
+      border-color $pink
+    
+.totop
+  pos fixed
+  z-index 5
+  b 20px
+  r 20px
+  cursor pointer
+  size 44px
+  border-radius 50%
+  box-shadow 0 6px 19px rgba(0, 0, 0, 0.12)
+  visibility hidden
+  opacity 0
+  background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAKBAMAAABLZROSAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAMFBMVEX///////////////////////////////////////////////////////////////9Or7hAAAAAD3RSTlMAPTz08p6hA6DzCennlZZZY9tOAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAEhJREFUCNdjYAACIQYoYDRRgLKE/ztBhezDvkAEhb+W5ztBhMIZysCCwl8LGNhBgiAhBoaKnwoMq4FCDAzs/acYGK+DtdUpAACFthD1OC0MSwAAAABJRU5ErkJggg==") no-repeat center #e76f17
+  transition .5s visible, .5s box-shadow, .5s opacity
+  &:hover
+    box-shadow none
+  &.visible
+    visibility visible
+    opacity 1
+      
+.breadcrumbs
+  mb 55px
+  color $grey
+  pos relative
+  mt -25px
+  pl 13px
+  &__href
+    color $grey
+    fontify 14px 400 18px
+    border-bottom 1px solid $grey
+    transition .5s border
+    &:hover
+      border-color transparent
+    @media $lDesktopMedium
+      fontify 12px 400 18px
+  &__delim
+    padding 0 11px
+    fontify 14px 400 18px
+    @media $lDesktopMedium
+      fontify 12px 400 18px
+
+input.warning,
+textarea.warning
+  border-color $pink
+
+.hidden-block
+  display none
+  
+.tippy-tooltip.light-theme
+  bgc white
+  box-shadow 0 6px 32px rgba(0, 0, 0, 0.21)
+  fontif 14px 400 18px
+  color $dark
+  padding 15px 19px
+  .tippy-backdrop
+    bgc white
+    color $dark
+  .tippy-arrow
+    border-top-color white

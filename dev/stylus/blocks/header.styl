@@ -1,0 +1,423 @@
+.header
+  pos fixed
+  display flex
+  align-items stretch
+  l 0
+  r 0
+  sp()
+  h 132px
+  z-index 11
+  @media $lDesktopMedium
+    h 95px
+  @media $desktopMin
+    h 84px
+    bgc white
+  @media $PortraitMin
+    h 64px !important
+  &__main
+    w 550px
+    display flex
+    align-items center
+    @media $lDesktopMedium
+      w 493px
+    @media $desktopMedium
+      w 425px
+    @media $desktopMin
+      w 100%
+      justify-content space-between
+  &__logo
+    pos absolute
+    t 0
+    l 0
+    size 100%
+    transition .7s opacity
+    @media $desktopMin
+      &_dark
+        opacity 0
+    &_white
+      opacity 0
+      @media $desktopMin
+        opacity 1
+    &over
+      size 216px 43px
+      pos relative
+  &__phone
+    ml 78px
+    color white
+    font-family $text
+    fontify 23px 500 23px
+    white-space nowrap
+    transition .7s color
+    @media $lDesktopMedium
+      fontify 17px 500 17px
+      ml 61px
+    @media $desktopMedium
+      ml 41px
+    @media $desktopMin
+      color #3b3b3b
+    @media $PortraitMax
+      fontify 15px 500 15px
+      ml 41px
+    @media $PortraitMedium
+      dn()
+  &__menu
+    pos relative
+    z-index -1
+    w calc(100% - 550px)
+    @media $lDesktopMedium
+      w calc(100% - 493px)
+    @media $desktopMedium
+      w calc(100% - 425px)
+    @media $desktopMin
+      pos fixed
+      display flex
+      align-items center
+      justify-content flex-start
+      w 100%
+      t 0
+      l -100%
+      opacity 0
+      padding 60px 30px 0
+      z-index 13
+      overflow auto
+      h 100%
+      transition .7s opacity
+    &:before
+      content ""
+      pos absolute
+      z-index -1
+      l 0
+      t 0
+      w calc(100vw - 710px)
+      h 100%
+      bgc white
+      transition .7s width, .7s left
+      @media $lDesktopMedium
+        w calc(100vw - 532px)
+      @media $desktopMedium
+        w calc(100vw - 465px)
+      @media $desktopMin
+        dn()
+    &-list
+      display flex
+      align-items stretch
+      h 100%
+      padding 0 52px
+      @media $lDesktopMedium
+        padding 0
+        pl 99px
+      @media $desktopMax
+        pl 79px
+      @media $desktopMedium
+        pl 49px
+      @media $desktopMin
+        db()
+        padding 0
+        w 100%
+    &-item
+      display flex
+      align-items center
+      pos relative
+      padding 0 49px
+      bgc white
+      @media $lDesktopMedium
+        bgc transparent
+        padding 0
+        & + &
+          ml 99px
+        & + &_search
+          ml 88px
+      @media $desktopMax
+        & + &
+          ml 39px
+          @media $desktopMin
+            ml 0
+            mt 35px
+        & + &_search
+          ml 38px
+          @media $desktopMin
+            ml 0
+            mt 35px
+      @media $desktopMin
+        align-items flex-start
+        flex-direction column
+        w 100%
+      &_search
+        padding 0
+        ml 38px
+        mt -1px
+        @media $desktopMin
+          mt 0
+          mb 60px
+      &-href
+        db()
+        color #3b3b3b
+        fontify 18px 400 132px
+        white-space nowrap
+        transition .7s color
+        @media $lDesktopMedium
+          fontify 14px 400 95px
+        @media $desktopMin
+          fontify 22px 400 24px
+        &:hover
+          color $pink
+    &-sublist
+      pos absolute
+      z-index -1
+      t 100%
+      l 0
+      bgc #F3F5F8
+      opacity 0
+      padding 44px 49px
+      display flex
+      flex-direction column
+      align-items flex-start
+      transform translateY(-100%)
+      will-change transform
+      transition .7s opacity, .7s transform, .7s visible
+      @media $lDesktopMedium
+        l -30px
+        padding 30px 35px
+        transform translateY(0)
+        visibility hidden
+      @media $desktopMin
+        l 0
+        padding 0
+        visibility visible
+        pos relative
+        opacity 1
+        bgc white
+        mt 20px
+        t 0
+    &-item:hover &-sublist
+      transform translateY(0)
+      opacity 1
+      @media $lDesktopMedium
+        visibility visible
+    &-subitem
+      & + &
+        mt 28px
+        @media $lDesktopMedium
+          mt 18px
+    &-subhref
+      color #3b3b3b
+      white-space nowrap
+      fontify 18px 400 24px
+      transition .7s color
+      @media $lDesktopMedium
+        fontify 14px 400 19px
+      &:hover
+        color $pink
+  &__search
+    pos absolute
+    r -5px
+    t -2px
+    h 48px
+    w 0
+    bgc #E6EAF0
+    t 50%
+    mt -24px
+    overflow hidden
+    transition .7s width
+    @media $desktopMin
+      w 100%
+      r 0
+    &.open
+      w 312px
+      @media $lDesktopMedium
+        w 265px
+      @media $desktopMin
+        w 100%
+    &-input
+      w 100%
+      h 100%
+      border 2px solid transparent
+      border 5px
+      bgc transparent
+      pl 12px
+      pr 51px
+      color $dblue
+      font-family $os
+      font-size 18px
+      transition .7s border
+    &-icon
+      size 43px
+      db()
+      background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAMAAACeyVWkAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABIFBMVEUXP23///8XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP20XP23////6O7dOAAAAXnRSTlMAADKMyuz03rBiBxOj4Vol6Z5uZYXAhxHmfwo4zHipVQK+Ln4L6rGVGtNX92F5/FjUgOh2A/Btujs9Zy+s5wjuznC9FFuJcyFBMHri2PLN6/o1/dp0LVJyZPn+QznFSc9FXQAAAAFiS0dEAf8CLd4AAAAJcEhZcwAACxIAAAsSAdLdfvwAAADwSURBVBjTZdDXUgJBEIXhXgxgQFfMrqioCIiKWVdRzDlixPC//2PYs4w46rmYmvqqa2r6iJjEmppbWuOJtnYRz8RYRyc2ya6GdifB70n19vWrD1gdHILhkeihYBTSdR2DcbGZyMCk0RhMSSPTWWaM5siKkxTkVQvkXM3DrGqROVclzrzqAqVfusiS6jIrLq6usa66QcbVTQhVt2Db0TI75me7FfZ+sAT70W56OTi0eAQF284xZE9Oda+zstbjn9smL0yJl1fXet7cchfWVe4T1ajeh0d5KlINve9Fn1/Sr0E0UePtXf7GC2rwX70P//MLsyovYozet+oAAAAASUVORK5CYII=") no-repeat center
+      transition .7s background
+      cursor pointer
+      &_input
+        pos absolute
+        t 2px
+        r 5px
+      &:hover
+        background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAMAAACeyVWkAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABIFBMVEXgkID////gkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkIDgkID///8n0DBwAAAAXnRSTlMAADKMyuz03rBiBxOj4Vol6Z5uZYXAhxHmfwo4zHipVQK+Ln4L6rGVGtNX92F5/FjUgOh2A/Btujs9Zy+s5wjuznC9FFuJcyFBMHri2PLN6/o1/dp0LVJyZPn+QznFSc9FXQAAAAFiS0dEAf8CLd4AAAAJcEhZcwAACxIAAAsSAdLdfvwAAADwSURBVBjTZdDXUgJBEIXhXgxgQFfMrqioCIiKWVdRzDlixPC//2PYs4w46rmYmvqqa2r6iJjEmppbWuOJtnYRz8RYRyc2ya6GdifB70n19vWrD1gdHILhkeihYBTSdR2DcbGZyMCk0RhMSSPTWWaM5siKkxTkVQvkXM3DrGqROVclzrzqAqVfusiS6jIrLq6usa66QcbVTQhVt2Db0TI75me7FfZ+sAT70W56OTi0eAQF284xZE9Oda+zstbjn9smL0yJl1fXet7cchfWVe4T1ajeh0d5KlINve9Fn1/Sr0E0UePtXf7GC2rwX70P//MLsyovYozet+oAAAAASUVORK5CYII=") no-repeat center
+  &.transform
+    h 84px
+    box-shadow 0 0 0.5rem rgba(0,0,0,0.1)
+  &.transform &__menu:before
+    w 100vw
+    l -710px
+    @media $lDesktopMedium
+      l -550px
+    @media $desktopMedium
+      l -465px
+  &.transform &__phone
+    color #3b3b3b
+  &.transform &__logo
+    &_white
+      opacity 1
+    &_dark
+      opacity 0
+  &__shadow
+    pos fixed
+    z-index 12
+    b 0
+    h 0
+    w 100%
+    l 0
+    bgc white
+    transition .7s height
+    
+.burger
+  &__button
+    dn()
+    cursor pointer
+    w 25px
+    h 16px
+    pos relative
+    z-index 14
+    flex-shrink 0
+    @media $desktopMin
+      db()
+      ml 20px
+    &:before
+      content ""
+      pos absolute
+      t 0
+      r 0
+      w 25px
+      h 2px
+      bgc $dblue
+      transition .5s width, .5s background, .5s transform, .5s top
+    &:after
+      content ""
+      pos absolute
+      b 0
+      r 0
+      w 25px
+      h 2px
+      bgc $dblue
+      transition .5s width, .5s background, .5s transform, .5s top  
+    &-meat
+      content ""
+      pos absolute
+      t 50%
+      r 0
+      w 25px
+      h 2px
+      mt -1px
+      bgc $dblue
+      transition .5s width, .5s background, .5s transform, .5s top  
+    &:not(.open):hover
+      &:before
+        animation burger-hover 1s infinite ease-in-out alternate
+      &:after
+        animation burger-hover 1s infinite ease-in-out alternate forwards 400ms
+    &:not(.open):hover &-meat
+      animation burger-hover 1s infinite ease-in-out alternate forwards 200ms
+    &.open
+      &:before
+        animation burger-top 1s ease-in-out forwards
+      &:after
+        animation burger-bottom 1s ease-in-out forwards
+      & ^[-1]-meat
+        opacity 0
+    &.open.remove
+      &:before
+        animation burger-top-invert 1s ease-in-out forwards
+      &:after
+        animation burger-bottom-invert 1s ease-in-out forwards
+      & ^[-1]-meat
+        opacity 1
+        transition .4s opacity .6s
+  
+@keyframes burger-hover
+  0%
+    w 100%
+  50%
+    w 50%
+  100%
+    w 100%
+      
+@keyframes burger-top
+  0%
+    t 0
+  40%
+    t 7px
+  60%
+    t 7px
+    transform rotate(0)
+  100%
+    t 7px
+    transform rotate(45deg)
+    
+@keyframes burger-bottom
+  0%
+    b 0
+  40%
+    b 7px
+  60%
+    b 7px
+    transform rotate(0)
+  100%
+    b 7px
+    transform rotate(-45deg)
+
+@keyframes burger-top-invert
+  0%
+    t 12px
+    transform rotate(45deg)
+  40%
+    t 12px
+    transform rotate(0)
+  60%
+    t 12px
+  100%
+    t 0
+    
+@keyframes burger-bottom-invert
+  0%
+    b 12px
+    transform rotate(-45deg)
+  40%
+    b 12px
+    transform rotate(0)
+  60%
+    b 12px
+  100%
+    b 0
+        
+html.burgeropen
+  overflow hidden
+  pos fixed
+  body
+    overflow hidden
+    pos fixed
+  .header
+    &__shadow
+      h 100%
+    &__menu
+      l 0
+      opacity 1
+      transition-delay .7s
+    
+html.touchevents
+  .burger__button
+    &:not(.open):hover
+      &:before
+        animation none
+      &:after
+        animation none
+    &:not(.open):hover .burger__button-meat
+      animation none

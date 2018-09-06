@@ -1,0 +1,32 @@
+{
+  "name": "extension",
+  "version": "1.0.0",
+  "description": "context highliter extension",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "NK",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "browser-sync": "^2.24.4",
+    "compress-images": "^1.3.7",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-babel": "^7.0.1",
+    "gulp-clean-css": "^3.9.4",
+    "gulp-concat": "^2.6.1",
+    "gulp-pug": "^4.0.1",
+    "gulp-rename": "^1.2.3",
+    "gulp-stylus": "^2.7.0",
+    "gulp-uglify": "^3.0.0",
+    "pump": "^3.0.0"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "npm": "^6.1.0"
+  }
+}

@@ -1,0 +1,93 @@
+footer.footer
+  aside.footer__info
+    img(src="img/footer-gpb.png").footer__info-gpb
+    img(src="img/footer-afk.png").footer__info-afk
+    p.footer__info-copy © 2018 ООО «ГПБ-факторинг». Все права защищены.
+  main.footer__menu
+    .footer__menu-col
+      a(href="#").footer__menu-mainhref Продукты
+      a(href="#").footer__menu-href О факторинге
+      a(href="#").footer__menu-href Для поставщиков
+      a(href="#").footer__menu-href Для покупателей
+      a(href="#").footer__menu-href Спецпредложения
+      a(href="#").footer__menu-href Преимущества
+    .footer__menu-col
+      a(href="#").footer__menu-mainhref О компании
+      a(href="#").footer__menu-href Цифры и факты
+      a(href="#").footer__menu-href Руководство
+      a(href="#").footer__menu-href Новости
+      a(href="#").footer__menu-href Карьера
+      a(href="#").footer__menu-href Контакты
+    .footer__menu-col
+      p.footer__contacts-title Связаться
+      a(href="mailto:factoring@gazprombank.ru").footer__contacts-mail factoring@gazprombank.ru
+      a(href="tel:+74957899525").footer__contacts-phone +7 (495) 789-95-25
+      button(type="button", data-fancybox, data-src="#feedback").footer__contacts-feedback Обратная связь
+      
+.hidden-block
+  #feedback.popup
+    p.popup__title Обратная связь
+    form.popup__form
+      .common__row.common__row_bg
+        input(type="text", data-req="req").common__input
+        label.common__placeholder Имя
+      .common__row.common__row_bg
+        input(type="text", data-req="req").common__input
+        label.common__placeholder Компания
+      .common__row.common__row_bg
+        input(type="text", data-req="req").common__input.js-phone
+        label.common__placeholder Телефон
+      .common__row.common__row_bg
+        input(type="text").common__input
+        label.common__placeholder E-mail 
+          span (необязательно)
+      .common__row.common__row_bg
+        textarea.common__textarea
+        label.common__placeholder Комментарий 
+          span (необязательно)
+      .common__row.common__row_center
+        img(src="img/captcha.jpg")
+      .common__row.common__row_center
+        button(type="submit").btn.common__sbm Свяжитель со мной
+      .common__row.common__row_popcheck
+        .fakecheckbox
+          input(type="checkbox", value="", name="agreement", checked)#agreement1.fakecheckbox__truecheck
+          label(for="agreement1").fakecheckbox__label Нажимая на кнопку отправки, Вы даете согласие на 
+            a(href="#") обработку персональных данных
+  #reg.popup
+    p.popup__title Заявка на регистрацию
+    form.popup__form
+      .common__row.common__row_bg
+        input(type="text", data-req="req").common__input
+        label.common__placeholder Имя
+      .common__row.common__row_bg
+        input(type="text", data-req="req").common__input
+        label.common__placeholder Фамилия
+      .common__row.common__row_bg
+        input(type="text").common__input
+        label.common__placeholder Отчество 
+          span (необязательно)
+      .common__row.common__row_bg
+        input(type="text", data-req="req", data-type="email").common__input
+        label.common__placeholder E-mail 
+      .common__row.common__row_bg
+        input(type="text", data-req="req").common__input.js-phone
+        label.common__placeholder Телефон
+      .common__row.common__row_bg
+        input(type="text", data-req="req").common__input
+        label.common__placeholder Компания
+      .common__row.common__row_bg
+        input(type="text", data-req="req").common__input
+        label.common__placeholder Должность
+      .common__row.common__row_center
+        img(src="img/captcha.jpg")
+      .common__row.common__row_center
+        button(type="submit").btn.common__sbm Свяжитель со мной
+      .common__row.common__row_popcheck
+        .fakecheckbox
+          input(type="checkbox", value="", name="agreement", checked)#agreement.fakecheckbox__truecheck
+          label(for="agreement").fakecheckbox__label Нажимая на кнопку отправки, Вы даете согласие на 
+            a(href="#") обработку персональных данных
+  #text.popup
+    p.popup__title Текстовый попал
+    p.popup__subtitle Текст для проверки того, что есть текст вообще здесь

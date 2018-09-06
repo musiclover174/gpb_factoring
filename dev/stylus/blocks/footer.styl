@@ -1,0 +1,194 @@
+.footer
+  pos relative
+  z-index 1
+  bgc $blue
+  sp()
+  pt 118px
+  pb 107px
+  display flex
+  justify-content space-between
+  align-items flex-start
+  @media $lDesktopMedium
+    pt 115px
+    pb 107px
+  @media $desktopMedium
+    pt 65px
+    pb 57px
+  @media $LandscapeMin
+    flex-direction column-reverse
+  &__info
+    display flex
+    flex-direction column
+    align-items flex-start
+    w calc(20% - 25px)
+    @media $lDesktopMedium
+      w calc(20% - 15px)
+    @media $desktopMax
+      w calc(40% - 15px)
+    @media $desktopMin
+      w calc(50% - 15px)
+    @media $LandscapeMin
+      w 100%
+    &-gpb
+      mb 68px
+      @media $desktopMedium
+        mb 48px
+      @media $desktopMin
+        mb 28px
+    &-afk
+      mb 101px
+      @media $desktopMedium
+        mb 48px
+      @media $desktopMin
+        mb 28px
+    &-copy
+      fontify 14px 400 22px
+  &__menu
+    pt 5px
+    w 60%
+    ml -25px
+    display flex
+    justify-content space-between
+    align-items flex-start
+    @media $lDesktopMedium
+      ml -15px
+    @media $desktopMin
+      w calc(50% - 15px)
+      ml 0
+    @media $LandscapeMin
+      w 100%
+      pt 0
+      mb 50px
+    &-col
+      display flex
+      flex-direction column
+      align-items flex-start
+      w calc(100% / 3)
+      ml 25px
+      @media $lDesktopMedium
+        ml 15px
+      @media $desktopMin
+        w 100%
+        ml 0
+        &:nth-child(1),
+        &:nth-child(2)
+          dn()
+    &-mainhref
+      color white
+      font-family $text
+      fontify 25px 500 31px
+      mb 44px
+      transition .7s color
+      @media $lDesktopMedium
+        fontify 20px 500 27px
+        mb 24px
+      &:hover
+        color $pink
+    &-href
+      color white
+      fontify 17px 400 22px
+      transition .7s color
+      @media $lDesktopMedium
+        fontify 12px 400 16px
+      & + &
+        mt 28px
+        @media $lDesktopMedium
+          mt 24px
+      &:hover
+        color $pink
+  &__contacts
+    &-title
+      color white
+      font-family $text
+      fontify 25px 500 31px
+      mb 44px
+      @media $lDesktopMedium
+        fontify 20px 500 27px
+        mb 24px
+    &-mail 
+      pos relative
+      color white
+      fontify 17px 400 22px
+      ml 47px
+      mb 43px
+      @media $lDesktopMedium
+        fontify 12px 400 16px
+        ml 38px
+        mb 30px
+      &:before
+        content ""
+        pos absolute
+        l -45px
+        t 3px
+        size 20px 16px
+        background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAMAAAAhxq8pAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAw1BMVEX///9Ka5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5D///96wDC4AAAAP3RSTlMATs3l4uHPU9TY8O900XLr8u71B433+ZEK8eP+qiQ8v8JAIKX93+dwc+p4bOTgwDsjrrEmN7wNifNR5tfaUlaML4KRAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAJFJREFUGNOlytcSgjAQheEDSRBRLICKvccae2/7/m/lMOiYmVz6X539ZmHZjAs95mTgklEWXi5v6+IXiiWUgzCMKl+q1mJ4dTSarTY63dR6fQyGI4YxkZwAU0k0mwOLJZGASj5Wa2y2uz0Ox+TiKVIQnYD4fCEdidyr5X/mD7U4xH94M1HibuIDT1sJpSWU83oDeNw6pB1mRQgAAAAASUVORK5CYII=") no-repeat center
+        @media $lDesktopMedium
+          l -37px
+          t 1px
+    &-phone
+      pos relative
+      color white
+      fontify 17px 400 22px
+      ml 47px
+      mb 43px
+      @media $lDesktopMedium
+        fontify 12px 400 16px
+        ml 38px
+        mb 30px
+      &:before
+        content ""
+        pos absolute
+        l -45px
+        t 3px
+        size 18px
+        background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAMAAABhEH5lAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAvVBMVEVKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5D////SRIENAAAAPXRSTlMAp+HbU+6Q15vBBZ30J2fLGe/NrSBK3xcCsaYscmP9YBEjgv7C57yWUIGjH8jkZu3i1uYzrgFOqi1qn+CrQ+RO9gAAAAFiS0dEPklkAOMAAAAJcEhZcwAACxIAAAsSAdLdfvwAAACVSURBVBjTXc7pEsFAEATgtcQKghDETcQZxH33+78WsxK1u/1r6quemmEZznk2x9RY+CavkSAqaGQT2UWVSkRlR6UKUbWmkuMCda3EWAPC04U10Wob5HfQNYj1LPRNG2A4ksN44qcWYEo9L5zNF8HyZytgHUUbehHbpLeLsT9IwTHdPZ2RhP9vXK63WJKrXr4/nqF4vT8HzhV3o0jHyAAAAABJRU5ErkJggg==") no-repeat center
+        @media $lDesktopMedium
+          l -37px
+          t 1px
+    &-feedback
+      pos relative
+      color white
+      fontify 17px 400 22px
+      ml 47px
+      cursor pointer
+      transition .7s color
+      @media $lDesktopMedium
+        fontify 12px 400 16px
+        ml 38px
+      &:before
+        content ""
+        pos absolute
+        l -45px
+        t 2px
+        size 21px 24px
+        background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAYCAMAAAAiV0Z6AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABBVBMVEVKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5BKa5D///9u62OQAAAAVXRSTlMAjt3g2WbvyuXRkWjjj5QJlW3MfAJzBXbcPXr4hC85NxAIivzu+fr7twuv2hGm95BfamcKorwZnr8EB5ryAzAOjbtbY2lgQOm63kcf9rW0lsi2veji0Q2HbAAAAAFiS0dEVgoN6YkAAAAJcEhZcwAACxIAAAsSAdLdfvwAAADeSURBVCjPY2BkYkYGLKwMIMAWigrYwaIcoZxcyIAbLMoTysuACXhC+ZB4/HBRAYSgoJCwCIaoaGgopxi6qHhoqIQkuglSoaHSMrJycnLyCnBRRSWgY5VVVNXU1FU14KKaWgifaCNM0NENDdXTNzA0NDSSRTLX2CQ01NQMw72K5qGhFpYY7rWytjGxxfSbiJ09zAQHrKHj6AQEzi6uTmDgBhWFAHco7YEk6unl7eIDZmkgiUoBWb5glh80hkDAn4FBLADMCkSOTX9uDQgjCCzK5QmKcA62YLYQcMyDYxMA6ek6r4u3RGUAAAAASUVORK5CYII=") no-repeat center
+        @media $lDesktopMedium
+          l -37px
+          t -2px
+      &:hover
+        color $pink
+
+.popup
+  border-radius 5px
+  w 95%
+  max-width 550px
+  padding 44px 84px 44px
+  @media $LandscapeMin
+    padding 44px 40px
+  &__title
+    color $dblue
+    font-family $text
+    fontify 43px 500 40px
+    text-align center
+    mb 40px
+    @media $lDesktopMedium
+      fontify 36px 500 40px
+  &__subtitle
+    color $dblue
+    text-align center
+    fontify 19px 400 23px
+    @media $lDesktopMedium
+      fontify 14px 400 19px
+  .common__row img
+    max-width 100%
+    h auto

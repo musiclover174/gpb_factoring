@@ -1,0 +1,45 @@
+header.header
+  span.header__shadow
+  .header__main
+    a(href="#").header__logoover
+      img(src="img/logo1.svg").header__logo.header__logo_dark
+      img(src="img/logo2.svg").header__logo.header__logo_white
+    a(href="tel:+74957899525").header__phone +7 (495) 789-95-25
+    button(type="button", aria-label="открыть мобильное меню").burger__button.js-burger
+      span.burger__button-meat
+  nav.header__menu
+    ul.header__menu-list
+      li.header__menu-item
+        a(href="#").header__menu-item-href Продукты
+        ul.header__menu-sublist
+          li.header__menu-subitem
+            a(href="#").header__menu-subhref О факторинге
+          li.header__menu-subitem
+            a(href="#").header__menu-subhref Для поставщиков
+          li.header__menu-subitem
+            a(href="#").header__menu-subhref Для покупателей
+          li.header__menu-subitem
+            a(href="#").header__menu-subhref Спецпредложение
+          li.header__menu-subitem
+            a(href="#").header__menu-subhref Преимущества
+      li.header__menu-item
+        a(href="#").header__menu-item-href О компании
+        ul.header__menu-sublist
+          li.header__menu-subitem
+            a(href="#").header__menu-subhref Цифры и факты
+          li.header__menu-subitem
+            a(href="#").header__menu-subhref Руководство
+          li.header__menu-subitem
+            a(href="#").header__menu-subhref Новости
+          li.header__menu-subitem
+            a(href="#").header__menu-subhref Карьера
+          li.header__menu-subitem
+            a(href="#").header__menu-subhref Контакты
+      li.header__menu-item
+        a(href="#", data-fancybox, data-src="#feedback").header__menu-item-href Обратная связь
+      li.header__menu-item.header__menu-item_search
+        button(type="button").header__search-icon.js-search-icon
+        form.header__search.js-search
+          button(type="submit").header__search-icon.header__search-icon_input
+          input(type="text", data-req="").header__search-input.js-search-input
+  

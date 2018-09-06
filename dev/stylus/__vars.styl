@@ -1,0 +1,142 @@
+$os = "Roboto"
+$comp = "PFDinTextCompPro"
+$text = "PFDinTextPro"
+
+$pink = #e09080
+$blue = #144680
+$dblue = #113d70
+
+$print = 'print'
+
+$PortraitMin = '(max-width:360px)'
+$PortraitMedium = '(max-width:400px)'
+$PortraitMax = '(max-width:500px)'
+
+$LandscapeMin = '(max-width:575px)'
+$LandscapeMedium = '(max-width:650px)'
+$LandscapeMax = '(max-width:768px)'
+
+$desktopMin = '(max-width:960px)'
+$desktopMinFrom = '(min-width:961px)'
+$desktopMedium = '(max-width:1100px)'
+$desktopMax = '(max-width:1270px)'
+
+$lDesktopSmall = '(max-width:1400px)'
+$lDesktopMedium = '(max-width:1560px)'
+$lDesktopMax = '(max-width:1740px)'
+
+sp()
+  padding 0 160px
+  @media $lDesktopMedium
+    padding 0 40px
+  @media $PortraitMin
+    pl 25px
+    pr 25px
+
+imgCentering()
+  position absolute
+  left 50%
+  top 50%
+  transform translate(-50%, -50%) scale(1)
+  transition 1s transform
+  will-change transform
+  
+imgCenteringMax90()
+  position absolute
+  left 50%
+  top 50%
+  max-width 90%
+  max-height 90%
+  transform translate(-50%, -50%) scale(1)
+  transition 1s transform
+  will-change transform
+  
+imgCenteringMax100()
+  position absolute
+  left 50%
+  top 50%
+  max-width 100%
+  max-height 100%
+  transform translate(-50%, -50%) scale(1)
+  transition 1s transform
+  will-change transform
+
+imgCenteringMin()
+  position absolute
+  left 50%
+  top 50%
+  min-height 100%
+  min-width 100%
+  transform translate(-50%, -50%) scale(1)
+  will-change transform
+  
+imgCenteringZoom()
+  transform translate(-50%, -50%) scale(1.02)
+  
+size($w, $h = $w)
+  width $w
+  height $h
+  
+ib($align = top)
+  display inline-block
+  vertical-align $align
+  
+fontify($fs, $fw, $lh)
+  font-size $fs
+  font-weight $fw
+  line-height $lh
+  
+w($val)
+  width $val
+
+h($val)
+  height $val
+  
+t($val)
+  top $val
+  
+r($val)
+  right $val
+  
+l($val)
+  left $val
+  
+b($val)
+  bottom $val
+
+bgc($val)
+  background-color $val
+  
+dn()
+  display none
+  
+db()
+  display block
+  
+pos($val)
+  position $val
+  
+mr($val)
+  margin-right $val
+
+mt($val)
+  margin-top $val
+
+ml($val)
+  margin-left $val
+  
+mb($val)
+  margin-bottom $val
+  
+pr($val)
+  padding-right $val
+
+pt($val)
+  padding-top $val
+
+pl($val)
+  padding-left $val
+  
+pb($val)
+  padding-bottom $val
+  

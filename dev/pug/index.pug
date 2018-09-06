@@ -1,0 +1,204 @@
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body.index
+    include layout/__header
+    section.content
+      section.top
+        img(src="img/header-bg.jpg", data-round="20").top__bg.js-tweenbg
+        main.top__about
+          button(type="button").top__tonext.js-tonext
+          p.top__about-place 18 октября 2018<br>Mercury Space Moscow City
+          p.top__about-name Здесь будет название конференции
+        aside.top__info
+          .top__info-content
+            p.top__info-text Эпоха глобального развития цифровых технологий дает возможность создавать более гибкие и благоприятные условия для оперативного решения финансовых задач компании, а также использования факторинга…что-то еще дописать – контент в разработке.
+            button(type="button", data-fancybox, data-src="#reg").btn.top__info-btn Регистрация
+      section.program
+        p.common__title.common__title_white Программа конференции
+        .program__content
+          main.program__content-main
+            ul.program__list
+              li.program__item
+                date.program__item-date 09:30 – 10:00
+                p.program__item-title Регистрация. Welcome-кофе
+              li.program__item
+                date.program__item-date 10:00 – 10:30
+                p.program__item-title Вступительное слово
+              li.program__item
+                date.program__item-date 10:30 – 11:00
+                p.program__item-title Обзор рынка, прогнозы
+              li.program__item
+                date.program__item-date 11:00 – 11:30
+                p.program__item-title Факторинг + ЭТП ГПБ
+              li.program__item
+                date.program__item-date 11:30 – 12:00
+                p.program__item-title Кофе-брейк
+              li.program__item
+                date.program__item-date 12:00 – 12:30
+                p.program__item-title 
+                  span Молоканова Е.А. 
+                  |  Важное и интересное о факторинге
+              li.program__item
+                date.program__item-date 13:00 – 13:30
+                p.program__item-title 
+                  span Фомина Е.С. 
+                  |  Законодательные изменения
+              li.program__item
+                date.program__item-date 13:30 – 14:00
+                p.program__item-title Успешные кейсы от наших клиентов в форме Public Talk (Дикси, НТВ, Металлурги, Нефть, Газ)
+              li.program__item
+                date.program__item-date 14:00 – 15:00
+                p.program__item-title Обед
+              li.program__item
+                date.program__item-date 15:00 – 16:00
+                p.program__item-title Специальный гость
+              li.program__item
+                date.program__item-date 16:00 – 18:00
+                p.program__item-title Вечерний коктейль
+            .program__btns
+              a(href="#").program__btn.program__btn_download Скачать программу
+              button(type="button", data-fancybox, data-src="#reg").btn.program__btn-reg Регистрация
+          aside.program__content-aside
+            p.common__title.common__title_small.common__title_white Спикеры 2018
+            .program__speakers-carover
+              .swiper-container.program__speakers-car.js-speakers
+                .swiper-wrapper
+                  .swiper-slide
+                    .program__speaker
+                      img(src="img/speaker1.jpg").program__speaker-img
+                      .program__speaker-content
+                        p.program__speaker-name Молоканова<br>Елена Аркадьевна
+                        p.program__speaker-place Генеральный директор «ГПБ-Факторинг»
+                  .swiper-slide
+                    .program__speaker
+                      img(src="img/speaker2.jpg").program__speaker-img
+                      .program__speaker-content
+                        p.program__speaker-name Аркадьев<br>Антон Викторович
+                        p.program__speaker-place Генеральный директор «ГПБ-Факторинг»
+                  .swiper-slide
+                    .program__speaker
+                      img(src="img/speaker3.jpg").program__speaker-img
+                      .program__speaker-content
+                        p.program__speaker-name Аркадьев<br>Антон Викторович
+                        p.program__speaker-place Генеральный директор «ГПБ-Факторинг»
+                  .swiper-slide
+                    .program__speaker
+                      img(src="img/speaker4.jpg").program__speaker-img
+                      .program__speaker-content
+                        p.program__speaker-name Молоканова<br>Елена Аркадьевна
+                        p.program__speaker-place Генеральный директор «ГПБ-Факторинг»
+                  .swiper-slide
+                    .program__speaker
+                      img(src="img/speaker2.jpg").program__speaker-img
+                      .program__speaker-content
+                        p.program__speaker-name Аркадьев<br>Антон Викторович
+                        p.program__speaker-place Генеральный директор «ГПБ-Факторинг»
+                  .swiper-slide
+                    .program__speaker
+                      img(src="img/speaker3.jpg").program__speaker-img
+                      .program__speaker-content
+                        p.program__speaker-name Аркадьев<br>Антон Викторович
+                        p.program__speaker-place Генеральный директор «ГПБ-Факторинг»
+              .swiper-buttons
+                .swiper-button-prev  
+                .swiper-button-next  
+      section.videos
+        p.common__title.common__title_white Видеогалерея
+        .videos__carover
+          .swiper-container.videos__car.js-videos
+            .swiper-wrapper
+              .swiper-slide.swiper-slide_wide
+                .videos__elem-imgover
+                  button(type="button", data-fancybox, data-src="https://www.youtube.com/watch?v=_sI_Ps7JSEk").videos__elem-play.js-video-play
+                  img(src="img/videos1.jpg").videos__elem-img
+                .videos__elem-content
+                  p.videos__elem-name Конференция «Важное и интересное о факторинге»
+                  p.videos__elem-text Эпоха глобального развития цифровых технологий дает возможность создавать более гибкие и благоприятные условия для оперативного решения финансовых задач компании, а также использования факторинга…что-то еще дописать – контент в разработке.
+              .swiper-slide
+                .videos__elem-imgover
+                  button(type="button", data-fancybox, data-src="https://www.youtube.com/watch?v=_sI_Ps7JSEk").videos__elem-play.js-video-play
+                  img(src="img/videos2.jpg").videos__elem-img
+                .videos__elem-content
+                  p.videos__elem-name Успешные кейсы от наших клиентов в форме Public Talk (Дикси, НТВ, Металлурги, Нефть, Газ)
+                  p.videos__elem-text Эпоха глобального развития цифровых технологий дает возможность создавать более гибкие и благоприятные условия для оперативного решения финансовых задач компании.
+              .swiper-slide
+                .videos__elem-imgover
+                  button(type="button", data-fancybox, data-src="https://www.youtube.com/watch?v=_sI_Ps7JSEk").videos__elem-play.js-video-play
+                  img(src="img/videos2.jpg").videos__elem-img
+                .videos__elem-content
+                  p.videos__elem-name Успешные кейсы от наших клиентов в форме Public Talk (Дикси, НТВ, Металлурги, Нефть, Газ)
+                  p.videos__elem-text Эпоха глобального развития цифровых технологий.
+              .swiper-slide
+                .videos__elem-imgover
+                  button(type="button", data-fancybox, data-src="https://www.youtube.com/watch?v=_sI_Ps7JSEk").videos__elem-play.js-video-play
+                  img(src="img/videos2.jpg").videos__elem-img
+                .videos__elem-content
+                  p.videos__elem-name Успешные кейсы от наших клиентов в форме Public Talk (Дикси, НТВ, Металлурги, Нефть, Газ) и еще какой-нибудь текст, чтобы увидеть длину 
+                  p.videos__elem-text Эпоха глобального развития цифровых технологий дает возможность создавать более гибкие и благоприятные условия для оперативного решения финансовых задач компании.
+          .swiper-buttons
+            .swiper-button-prev  
+            .swiper-button-next  
+      section.partners
+        p.common__title Партнеры
+        .partners__carover
+          .swiper-container.partners__car.js-partners
+            .swiper-wrapper
+              .swiper-slide
+                .partners__elem
+                  .partners__elem-logoover
+                    img(src="img/partners1.png").partners__elem-logo
+                  p.partners__elem-state Генеральный информационный партнер
+              .swiper-slide
+                .partners__elem
+                  .partners__elem-logoover
+                    img(src="img/partners2.png").partners__elem-logo
+                  p.partners__elem-state Стратегический партнер
+              .swiper-slide
+                .partners__elem
+                  .partners__elem-logoover
+                    img(src="img/partners3.png").partners__elem-logo
+                  p.partners__elem-state Спонсор вечернего коктейля
+              .swiper-slide
+                .partners__elem
+                  .partners__elem-logoover
+                    img(src="img/partners1.png").partners__elem-logo
+                  p.partners__elem-state Генеральный информационный партнер
+              .swiper-slide
+                .partners__elem
+                  .partners__elem-logoover
+                    img(src="img/partners2.png").partners__elem-logo
+                  p.partners__elem-state Стратегический партнер
+              .swiper-slide
+                .partners__elem
+                  .partners__elem-logoover
+                    img(src="img/partners3.png").partners__elem-logo
+                  p.partners__elem-state Спонсор вечернего коктейля
+          .swiper-buttons
+            .swiper-button-prev.swiper-button-prev_dark  
+            .swiper-button-next.swiper-button-next_dark  
+      section.place
+        aside.place__info
+          p.common__title.common__title_white.place__title Место проведения
+          img(src="img/place.jpg").place__img
+          p.place__address Moscow City, башня Меркурий<br>(1-ый красногвардейский переулок, дом 15), зал Mercury Space. 
+          button(type="button", data-fancybox, data-src="#reg").btn.place__btn Регистрация
+        main.place__mapover
+          .place__map.js-map(data-coords="55.750621,37.539660")
+          script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDTIKzsSt-JWBYMGIXaK0Q6vMhJeoYanc", type="text/javascript")
+      section.catalog
+        main.catalog__main
+          p.common__title.common__title_small Каталог документов
+          .catalog__hrefs-row
+            .catalog__hrefs-col
+              a(href="#").catalog__href Программа конференций
+              p.catalog__href-info PDF, 13Мб
+            .catalog__hrefs-col
+              a(href="#").catalog__href Схема проезда
+              p.catalog__href-info PDF, 7Мб
+        aside.catalog__contacts
+          p.catalog__contacts-title Контакты для СМИ и партнеров
+          a(href="mailto:Natalia.Kurseeva@gazprombank.ru").catalog__contacts-mail Natalia.Kurseeva@gazprombank.ru
+    include layout/__footer
+    include layout/__scripts
